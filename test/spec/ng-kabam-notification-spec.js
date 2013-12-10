@@ -15,7 +15,7 @@ function checkPermission(userAgent) {
   // expected user agents
   var USER_AGENT = {
     FIREFOX: userAgent.match(/Firefox\//),
-    CHROME: userAgent.match(/Chrome\//) || userAgent.match(/PhantomJS\//)
+    CHROME: userAgent.match(/Chrome\//)
   };
 
   var notification;
@@ -62,7 +62,7 @@ function isRequestPermissionMethodCalled(userAgent) {
   // expected user agents
   var USER_AGENT = {
     FIREFOX: userAgent.match(/Firefox\//),
-    CHROME: userAgent.match(/Chrome\//) || userAgent.match(/PhantomJS\//)
+    CHROME: userAgent.match(/Chrome\//)
   };
 
   if (USER_AGENT.FIREFOX) {
@@ -82,6 +82,20 @@ describe('Service: ng-kabam-notification', function() {
 
     inject(function($injector) {
       WebNotification = $injector.get('WebNotification');
+    });
+  });
+
+  describe('WebNotification.requestPermission()', function() {
+    it('should request the permission', function() {
+      // evaluate the permission status before requesting permission
+      expect(checkPermission(navigator.userAgent)).toEqual(1);
+
+      expect(WebNotification.requestPermission).toBeDefined();
+
+      WebNotification.requestPermission();
+
+      // expect the requestPermission method has been called
+      isRequestPermissionMethodCalled(navigator.userAgent);
     });
   });
 
