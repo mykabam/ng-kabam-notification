@@ -33,6 +33,7 @@
     "navigator": false,
     "Notification": false,
     "webkitNotifications": false,
-    "window": false
+    "window": false,
+    "io": false
   }
 }

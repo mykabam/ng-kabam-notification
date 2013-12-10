@@ -21,8 +21,13 @@
     "test",
     "tests"
   ],
+  "dependencies": {
+    "angular-socket-io": "~0.2.0"
+  },
   "devDependencies": {
-    "bower": "*",
     "angular-mocks": "~1.2.4"
+  },
+  "resolutions": {
+    "angular": "1.2.4"
   }
 }

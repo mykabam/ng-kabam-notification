@@ -14,7 +14,17 @@
  * only click event will work best on Google Chrome, otherwise will not be
  * working as expected.
  */
-angular.module('ng-kabam-notification', [])
+angular.module('ng-kabam-notification', [
+  // 3rd party dependencies
+  'btford.socket-io'
+])
+  .config(['socketProvider',
+    function(socketProvider) {
+      var kabamSocket = io.connect();
+      // do stuff with kabamSocket
+      socketProvider.ioSocket(kabamSocket);
+    }
+  ])
   .factory('WebNotification', function() {
     return {
 
