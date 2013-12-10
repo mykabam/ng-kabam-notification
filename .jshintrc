@@ -32,6 +32,7 @@
     "angular": false,
     "navigator": false,
     "Notification": false,
-    "webkitNotifications": false
+    "webkitNotifications": false,
+    "window": false
   }
 }
