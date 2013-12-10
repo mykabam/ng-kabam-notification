@@ -6,7 +6,7 @@
     "Muhammad Ghazali <muhammadghazali2480@gmail.com>"
   ],
   "description": "Notification service for Kabam application",
-  "main": "index.js",
+  "main": "ng-kabam-notification.js",
   "keywords": [
     "kabam",
     "notification",
