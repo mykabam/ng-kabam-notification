@@ -108,4 +108,38 @@ describe('Service: ng-kabam-notification', function() {
     });
   });
 
+  describe('WebNotification.show()', function() {
+
+    it('should be able show the broadcast notification type', function() {
+      expect(WebNotification.show).toBeDefined();
+      spyOn(WebNotification, 'show').andCallThrough();
+      WebNotification.show('broadcast', {
+        message: 'fake message'
+      });
+      expect(WebNotification.show).toHaveBeenCalled();
+    });
+
+    xit('should be able show the notify notification type', function() {
+      expect(WebNotification.show).toBeDefined();
+      spyOn(WebNotification, 'show').andCallThrough();
+      WebNotification.show('notify', {
+        'user': 'notifiedUser',
+        'message': 'Incoming chat message',
+        'type': 'chat'
+      });
+      expect(WebNotification.show).toHaveBeenCalled();
+    });
+
+    xit('should be able show the call notification type', function() {
+      expect(WebNotification.show).toBeDefined();
+      spyOn(WebNotification, 'show').andCallThrough();
+      WebNotification.show('call', {
+        'user': 'notifiedUser',
+        'message': 'Incoming call',
+        'type': 'call'
+      });
+      expect(WebNotification.show).toHaveBeenCalled();
+    });
+  });
+
 });

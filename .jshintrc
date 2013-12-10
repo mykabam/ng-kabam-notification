@@ -20,6 +20,7 @@
   "predef": [
     "describe",
     "it",
+    "xit",
     "before",
     "beforeEach",
     "after",

@@ -25,8 +25,20 @@ angular.module('ng-kabam-notification', [
       socketProvider.ioSocket(kabamSocket);
     }
   ])
-  .factory('WebNotification',
-    function() {
+  .factory('NotificationFactory', function() {
+    return {
+      createNotification: function(options) {
+
+        if (options.type === 'broadcast') {
+          return new Notification('Broadcast', {
+            body: options.data
+          });
+        }
+      }
+    };
+  })
+  .factory('WebNotification', ['NotificationFactory',
+    function(NotificationFactory) {
       return {
 
         /**
@@ -61,7 +73,20 @@ angular.module('ng-kabam-notification', [
               }
             });
           }
+        },
+        /**
+         * Show notification
+         * @param {String} notification type, can be any of these type:
+         * 'broadcast', 'notify', 'call'
+         */
+        show: function(type, data) {
+          // TODO use the data to specify which notification we should display
+
+          return NotificationFactory.createNotification({
+            notificationType: type,
+            data: data
+          });
         }
       };
     }
-);
+  ]);
