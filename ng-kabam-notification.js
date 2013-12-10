@@ -28,10 +28,9 @@ angular.module('ng-kabam-notification', [
   .factory('NotificationFactory', function() {
     return {
       createNotification: function(options) {
-
-        if (options.type === 'broadcast') {
-          return new Notification('Broadcast', {
-            body: options.data
+        if (options.notificationType === 'broadcast') {
+          new Notification('Broadcast', {
+            body: options.data.message
           });
         }
       }
@@ -82,7 +81,7 @@ angular.module('ng-kabam-notification', [
         show: function(type, data) {
           // TODO use the data to specify which notification we should display
 
-          return NotificationFactory.createNotification({
+          NotificationFactory.createNotification({
             notificationType: type,
             data: data
           });
