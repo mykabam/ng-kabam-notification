@@ -79,8 +79,6 @@ angular.module('ng-kabam-notification', [
          * 'broadcast', 'notify', 'call'
          */
         show: function(type, data) {
-          // TODO use the data to specify which notification we should display
-
           NotificationFactory.createNotification({
             notificationType: type,
             data: data
