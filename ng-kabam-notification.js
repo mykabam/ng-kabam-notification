@@ -25,13 +25,8 @@ angular.module('ng-kabam-notification', [
       socketProvider.ioSocket(kabamSocket);
     }
   ])
-  .factory('WebNotification', ['socket',
-    function(socket) {
-
-      socket.on('notify', function(data) {
-        console.log('on notify data', data);
-      });
-
+  .factory('WebNotification',
+    function() {
       return {
 
         /**
@@ -69,4 +64,4 @@ angular.module('ng-kabam-notification', [
         }
       };
     }
-  ]);
+);
