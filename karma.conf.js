@@ -44,7 +44,7 @@ module.exports = function(config) {
     // - IE (only Windows)
 
     // test this browers on local development environment
-    browsers: ['PhantomJS', 'Firefox', 'Chrome'],
+    browsers: ['Firefox', 'Chrome'],
 
     // test this browers on TravisCI
     // browsers: ['PhantomJS', 'Firefox'],
