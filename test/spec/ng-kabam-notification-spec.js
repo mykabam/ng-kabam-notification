@@ -1,3 +1,5 @@
+/*jshint -W030 */
+
 /*
  * Helper function to check the notification permission status based on the sent
  * user-agent header. We need to check based on per browser since each browser
