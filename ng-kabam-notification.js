@@ -20,7 +20,6 @@ angular.module('ng-kabam-notification', [])
 
       /**
        * To check if Web Notification is supported or not in running browser.
-       * @service isSupported
        * @return {Boolean} return true if Web Notification is supported
        */
       isSupported: function() {
