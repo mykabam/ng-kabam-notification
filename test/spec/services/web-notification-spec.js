@@ -126,13 +126,18 @@ describe('Service: WebNotification', function() {
       expect(WebNotification.show).toHaveBeenCalled();
     });
 
-    xit('should be able show the notify notification type', function() {
+    it('should be able show the default notification type', function() {
       expect(WebNotification.show).toBeDefined();
       spyOn(WebNotification, 'show').andCallThrough();
       WebNotification.show('notify', {
-        'user': 'notifiedUser',
-        'message': 'Incoming chat message',
-        'type': 'chat'
+        user: {
+          username: 'notifiedUser'
+        },
+        message: {
+          from: 'notificationSender',
+          text: 'Incoming chat message'
+        },
+        type: 'default'
       });
       expect(WebNotification.show).toHaveBeenCalled();
     });

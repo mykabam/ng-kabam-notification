@@ -15,6 +15,23 @@ angular.module('ng-kabam-notification')
           new Notification('Broadcast', {
             body: options.data.message
           });
+        } else if (options.notificationType === 'notify' &&
+          options.data.type && options.data.type === 'default') {
+
+          // required data payload structures
+          // {
+          //   user: {
+          //     username: 'user2'
+          //   },
+          //   message: {
+          //     from: 'user1',
+          //     text: 'Hi'
+          //   },
+          //   type: 'default'
+          // }
+          new Notification('Notification from ' + options.data.message.from, {
+            body: options.data.message.text
+          });
         }
       }
     };
