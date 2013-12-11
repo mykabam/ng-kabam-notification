@@ -7,7 +7,9 @@
   ],
   "description": "Notification service for Kabam application",
   "main": [
-    "src/ng-kabam-notification.js"
+    "src/ng-kabam-notification.js",
+    "src/services/notification-factory.js",
+    "src/services/web-notification.js"
   ],
   "keywords": [
     "kabam",
