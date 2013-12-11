@@ -25,17 +25,6 @@ angular.module('ng-kabam-notification', [
       socketProvider.ioSocket(kabamSocket);
     }
   ])
-  .factory('NotificationFactory', function() {
-    return {
-      createNotification: function(options) {
-        if (options.notificationType === 'broadcast') {
-          new Notification('Broadcast', {
-            body: options.data.message
-          });
-        }
-      }
-    };
-  })
   .factory('WebNotification', ['NotificationFactory',
     function(NotificationFactory) {
       return {
