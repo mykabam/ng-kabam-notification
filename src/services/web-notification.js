@@ -1,11 +1,9 @@
 /**
- * @overview NotificationFactory
+ * @overview WebNotification
  * @ngdoc service
  *
- * @description a factory service that provide a service to construct
- * new Notification. The Notification object is used to configure and
- * display desktop notifications to the user. So, after we construct the
- * Notification, the notification dialog will show up.
+ * @description a factory service that provide a service to show Notification
+ * based on the Notification type.
  */
 angular.module('ng-kabam-notification')
   .factory('WebNotification', ['NotificationFactory',
