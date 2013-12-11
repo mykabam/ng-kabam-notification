@@ -17,7 +17,7 @@ module.exports = function(config) {
       'bower_components/angular-socket-io/socket.js',
       // load the main.js first, since the kabam.webrtc module is declared
       // on this file
-      'ng-kabam-notification.js',
+      'src/ng-kabam-notification.js',
       'test/spec/**/*.js'
     ],
 
