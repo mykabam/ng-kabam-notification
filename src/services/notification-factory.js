@@ -53,7 +53,6 @@ angular.module('ng-kabam-notification')
             callNotification.addEventListener('click', function() {
               $window.open('/home#/call/room/' + options.data.message.roomId,
                 '_self');
-              // $window.open('/', '_self');
               callNotification.close();
             });
 
