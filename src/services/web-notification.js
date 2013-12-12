@@ -45,12 +45,12 @@ angular.module('ng-kabam-notification')
         },
         /**
          * Show notification
-         * @param {String} notification type, can be any of these type:
-         * 'broadcast', 'notify', 'call'
+         * @param {String} action which socket event to use, `broadcast` or
+         * `notify`
          */
-        show: function(type, data) {
+        show: function(action, data) {
           NotificationFactory.createNotification({
-            notificationType: type,
+            action: action,
             data: data
           });
         }

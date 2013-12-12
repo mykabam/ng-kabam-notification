@@ -26,7 +26,7 @@ describe('Service: NotificationFactory', function() {
       spyOn(NotificationFactory, 'createNotification').andCallThrough();
 
       NotificationFactory.createNotification({
-        notificationType: 'broadcast',
+        action: 'broadcast',
         data: {
           message: 'Hi!'
         }

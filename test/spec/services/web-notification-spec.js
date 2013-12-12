@@ -145,7 +145,7 @@ describe('Service: WebNotification', function() {
     it('should be able show the call notification type', function() {
       expect(WebNotification.show).toBeDefined();
       spyOn(WebNotification, 'show').andCallThrough();
-      WebNotification.show('call', {
+      WebNotification.show('notify', {
         user: {
           username: 'callee'
         },

@@ -12,7 +12,15 @@ angular.module('ng-kabam-notification')
     function($window) {
       return {
         createNotification: function(options) {
-          if (options.notificationType === 'broadcast') {
+          // notification actions
+          var BROADCAST_ACTION = options.action === 'broadcast',
+            NOTIFY_ACTION = options.action === 'broadcast';
+
+          // notification types
+          var DEFAULT_NOTIF = NOTIFY_ACTION && options.data.type === 'default',
+            CALL_NOTIF = NOTIFY_ACTION && options.data.type === 'call';
+
+          if (BROADCAST_ACTION) {
             // required data payload structures
             // {
             //   message: 'Hi'
@@ -20,8 +28,7 @@ angular.module('ng-kabam-notification')
             new Notification('Broadcast', {
               body: options.data.message
             });
-          } else if (options.notificationType === 'notify' &&
-            options.data.type && options.data.type === 'default') {
+          } else if (DEFAULT_NOTIF) {
 
             // required data payload structures
             // {
@@ -37,8 +44,7 @@ angular.module('ng-kabam-notification')
             new Notification('Notification from ' + options.data.message.from, {
               body: options.data.message.text
             });
-          } else if (options.notificationType === 'notify' &&
-            options.data.type && options.data.type === 'call') {
+          } else if (CALL_NOTIF) {
             // required data payload structures
             // user: {
             //   username: 'callee'
