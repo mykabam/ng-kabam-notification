@@ -87,7 +87,7 @@ following data structure:
 ```
 {
   user: {
-  username: 'callee'
+    username: 'callee'
   },
   message: {
     callee: 'callee',
