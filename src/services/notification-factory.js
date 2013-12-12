@@ -13,6 +13,10 @@ angular.module('ng-kabam-notification')
       return {
         createNotification: function(options) {
           if (options.notificationType === 'broadcast') {
+            // required data payload structures
+            // {
+            //   message: 'Hi'
+            // }
             new Notification('Broadcast', {
               body: options.data.message
             });
