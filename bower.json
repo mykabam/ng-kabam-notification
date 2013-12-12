@@ -9,7 +9,8 @@
   "main": [
     "src/ng-kabam-notification.js",
     "src/services/notification-factory.js",
-    "src/services/web-notification.js"
+    "src/services/web-notification.js",
+    "src/controllers/global-notification.js"
   ],
   "keywords": [
     "kabam",

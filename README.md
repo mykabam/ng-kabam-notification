@@ -26,7 +26,8 @@ Include the main scripts into your application. Run `bower list --paths` to see 
   "ng-kabam-notification": [
     "bower_components/ng-kabam-notification/src/ng-kabam-notification.js",
     "bower_components/ng-kabam-notification/src/services/notification-factory.js",
-    "bower_components/ng-kabam-notification/src/services/web-notification.js"
+    "bower_components/ng-kabam-notification/src/services/web-notification.js",
+    "bower_components/ng-kabam-notification/src/controllers/global-notification.js""
   ]
 }
 ```

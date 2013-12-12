@@ -18,6 +18,7 @@ module.exports = function(config) {
       'bower_components/angular-socket-io/socket.js',
       // the module files
       'src/ng-kabam-notification.js',
+      'src/controllers/**/*.js',
       'src/services/**/*.js',
       // the module tests
       'test/spec/**/*.js'
