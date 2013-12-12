@@ -9,7 +9,7 @@
  */
 angular.module('ng-kabam-notification')
   .factory('NotificationFactory', ['$window',
-    function() {
+    function($window) {
       return {
         createNotification: function(options) {
           if (options.notificationType === 'broadcast') {
@@ -49,11 +49,12 @@ angular.module('ng-kabam-notification')
               body: options.data.message.caller + ' is calling. Click this notification to accept'
             });
 
-            // when the notification clicked then redirect to room
+            // when the notification window clicked then redirect to room view
             callNotification.addEventListener('click', function() {
-              $window.open('/home#/call/room/' + data.message.roomId,
+              $window.open('/home#/call/room/' + options.data.message.roomId,
                 '_self');
-              notification.close();
+              // $window.open('/', '_self');
+              callNotification.close();
             });
 
           }
