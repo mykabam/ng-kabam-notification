@@ -11,11 +11,16 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      // module dependencies
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
-      // load the main.js first, since the kabam.webrtc module is declared
-      // on this file
-      'ng-kabam-notification.js',
+      'test/lib/socket.io.js',
+      'bower_components/angular-socket-io/socket.js',
+      // the module files
+      'src/ng-kabam-notification.js',
+      'src/controllers/**/*.js',
+      'src/services/**/*.js',
+      // the module tests
       'test/spec/**/*.js'
     ],
 

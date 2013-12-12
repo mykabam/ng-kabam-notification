@@ -6,7 +6,12 @@
     "Muhammad Ghazali <muhammadghazali2480@gmail.com>"
   ],
   "description": "Notification service for Kabam application",
-  "main": "index.js",
+  "main": [
+    "src/ng-kabam-notification.js",
+    "src/services/notification-factory.js",
+    "src/services/web-notification.js",
+    "src/controllers/global-notification.js"
+  ],
   "keywords": [
     "kabam",
     "notification",
@@ -21,8 +26,13 @@
     "test",
     "tests"
   ],
+  "dependencies": {
+    "angular-socket-io": "~0.2.0"
+  },
   "devDependencies": {
-    "bower": "*",
     "angular-mocks": "~1.2.4"
+  },
+  "resolutions": {
+    "angular": "1.2.4"
   }
 }

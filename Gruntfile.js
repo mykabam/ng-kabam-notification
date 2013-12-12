@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         jshintrc: '.jshintrc'
       },
       all: {
-        src: ['Gruntfile.js', 'ng-kabam-notification.js', 'test/**/*.js']
+        src: ['Gruntfile.js', 'src/**/*.js', 'test/spec/**/*.js']
       },
       ci: {
         options: {
