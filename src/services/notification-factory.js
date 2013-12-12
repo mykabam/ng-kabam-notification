@@ -14,7 +14,7 @@ angular.module('ng-kabam-notification')
         createNotification: function(options) {
           // notification actions
           var BROADCAST_ACTION = options.action === 'broadcast',
-            NOTIFY_ACTION = options.action === 'broadcast';
+            NOTIFY_ACTION = options.action === 'notify';
 
           // notification types
           var DEFAULT_NOTIF = NOTIFY_ACTION && options.data.type === 'default',
