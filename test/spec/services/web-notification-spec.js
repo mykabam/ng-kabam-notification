@@ -142,13 +142,19 @@ describe('Service: WebNotification', function() {
       expect(WebNotification.show).toHaveBeenCalled();
     });
 
-    xit('should be able show the call notification type', function() {
+    it('should be able show the call notification type', function() {
       expect(WebNotification.show).toBeDefined();
       spyOn(WebNotification, 'show').andCallThrough();
       WebNotification.show('call', {
-        'user': 'notifiedUser',
-        'message': 'Incoming call',
-        'type': 'call'
+        user: {
+          username: 'callee'
+        },
+        message: {
+          callee: 'callee',
+          caller: 'caller',
+          roomId: '34e971f0-7b67-4506-8f96-9855163477fc'
+        },
+        type: 'call'
       });
       expect(WebNotification.show).toHaveBeenCalled();
     });

@@ -32,6 +32,22 @@ angular.module('ng-kabam-notification')
           new Notification('Notification from ' + options.data.message.from, {
             body: options.data.message.text
           });
+        } else if (options.notificationType === 'notify' &&
+          options.data.type && options.data.type === 'call') {
+          // required data payload structures
+          // user: {
+          //   username: 'callee'
+          // },
+          // message: {
+          //   callee: 'callee',
+          //   caller: 'caller',
+          //   roomId: '34e971f0-7b67-4506-8f96-9855163477fc'
+          // },
+          // type: 'call'
+          new Notification('You got call!', {
+            body: options.data.message.caller + ' is calling. Click this notification to accept'
+          });
+
         }
       }
     };
