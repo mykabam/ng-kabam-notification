@@ -44,3 +44,56 @@ angular.module('yourAwesomeApplication', [
   'ng-kabam-notification'
 ]);
 ```
+
+# Notes on Notification Payload Structures
+
+## Broadcast Notification
+
+When your application server send broadcast notification,
+ng-kabam-notification only able to handle it if the payload is similar with the
+following data structure:
+
+```
+{
+  message: 'Hi'
+}
+```
+
+## Default Notification
+
+When your application server send default notification,
+ng-kabam-notification only able to handle it if the payload is similar with the
+following data structure:
+
+```
+{
+  user: {
+    username: 'user2'
+  },
+  message: {
+    from: 'user1',
+    text: 'Hi'
+  },
+  type: 'default'
+}
+```
+
+## Call Notification
+
+When your application server send call notification,
+ng-kabam-notification only able to handle it if the payload is similar with the
+following data structure:
+
+```
+{
+  user: {
+  username: 'callee'
+  },
+  message: {
+    callee: 'callee',
+    caller: 'caller',
+    roomId: '34e971f0-7b67-4506-8f96-9855163477fc'
+  },
+  type: 'call'
+}
+```
