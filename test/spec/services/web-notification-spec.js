@@ -108,13 +108,6 @@ describe('Service: WebNotification', function() {
     });
   });
 
-  describe('WebNotification.isSupported()', function() {
-    it('should return true if the running browser supporting Web Notification', function() {
-      expect(WebNotification.isSupported).toBeDefined();
-      expect(WebNotification.isSupported()).toBe(true);
-    });
-  });
-
   describe('WebNotification.show()', function() {
 
     it('should be able show the broadcast notification type', function() {
