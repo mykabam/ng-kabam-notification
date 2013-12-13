@@ -75,7 +75,7 @@ function isRequestPermissionMethodCalled(userAgent) {
   }
 }
 
-describe('Service: WebNotification', function() {
+describe('Service: WebNotification is supported', function() {
 
   var WebNotification;
 
@@ -105,6 +105,76 @@ describe('Service: WebNotification', function() {
 
       // expect the requestPermission method has been called
       isRequestPermissionMethodCalled(navigator.userAgent);
+    });
+  });
+
+  describe('WebNotification.show()', function() {
+
+    it('should be able show the broadcast notification type', function() {
+      expect(WebNotification.show).toBeDefined();
+      spyOn(WebNotification, 'show').andCallThrough();
+      WebNotification.show('broadcast', {
+        message: 'fake message'
+      });
+      expect(WebNotification.show).toHaveBeenCalled();
+    });
+
+    it('should be able show the default notification type', function() {
+      expect(WebNotification.show).toBeDefined();
+      spyOn(WebNotification, 'show').andCallThrough();
+      WebNotification.show('notify', {
+        user: {
+          username: 'notifiedUser'
+        },
+        message: {
+          from: 'notificationSender',
+          text: 'Incoming chat message'
+        },
+        type: 'default'
+      });
+      expect(WebNotification.show).toHaveBeenCalled();
+    });
+
+    it('should be able show the call notification type', function() {
+      expect(WebNotification.show).toBeDefined();
+      spyOn(WebNotification, 'show').andCallThrough();
+      WebNotification.show('notify', {
+        user: {
+          username: 'callee'
+        },
+        message: {
+          callee: 'callee',
+          caller: 'caller',
+          roomId: '34e971f0-7b67-4506-8f96-9855163477fc'
+        },
+        type: 'call'
+      });
+      expect(WebNotification.show).toHaveBeenCalled();
+    });
+  });
+});
+
+describe('Service: WebNotification is not supported', function() {
+
+  var WebNotification,
+    NotificationUtils;
+
+  beforeEach(function() {
+    module('ng-kabam-notification');
+
+    inject(function($injector) {
+      WebNotification = $injector.get('WebNotification');
+      NotificationUtils = $injector.get('NotificationUtils');
+    });
+
+    spyOn(NotificationUtils, 'isSupported').andReturn(false);
+  });
+
+  describe('Module', function() {
+
+    it('should be loaded', function() {
+      expect(WebNotification).not.toBe(null);
+      expect(NotificationUtils).not.toBe(null);
     });
   });
 
