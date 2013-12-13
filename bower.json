@@ -21,10 +21,18 @@
   "private": true,
   "ignore": [
     "**/.*",
+    "**/*.md",
+    "*.sublime-*",
+    "LICENSE",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "index.js",
+    "karma.conf.js",
+    "Gruntfile.js",
+    "package.json",
+    "bower.json",
+    "results"
   ],
   "dependencies": {
     "angular-socket-io": "~0.2.0"
