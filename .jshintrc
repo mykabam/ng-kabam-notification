@@ -35,6 +35,7 @@
     "Notification": false,
     "webkitNotifications": false,
     "window": false,
-    "io": false
+    "io": false,
+    "$": false
   }
 }

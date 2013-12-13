@@ -8,6 +8,7 @@
   "description": "Notification service for Kabam application",
   "main": [
     "src/ng-kabam-notification.js",
+    "src/services/notification-utils.js",
     "src/services/notification-factory.js",
     "src/services/web-notification.js",
     "src/controllers/global-notification.js"
@@ -35,7 +36,9 @@
     "results"
   ],
   "dependencies": {
-    "angular-socket-io": "~0.2.0"
+    "angular-socket-io": "~0.2.0",
+    "pines-notify": "~1.2.0",
+    "jquery": "~2.0.3"
   },
   "devDependencies": {
     "angular-mocks": "~1.2.4"
