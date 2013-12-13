@@ -31,7 +31,8 @@
     "karma.conf.js",
     "Gruntfile.js",
     "package.json",
-    "bower.json"
+    "bower.json",
+    "results"
   ],
   "dependencies": {
     "angular-socket-io": "~0.2.0"
