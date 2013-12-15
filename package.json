@@ -1,6 +1,5 @@
 {
   "name": "ng-kabam-notification",
-  "version": "0.0.0",
   "description": "Notification service for Kabam application",
   "scripts": {
     "test": "grunt test"
