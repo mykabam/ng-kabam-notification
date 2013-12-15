@@ -45,6 +45,16 @@ angular.module('yourAwesomeApplication', [
 ]);
 ```
 
+## Listen to backend
+
+In order to listen notification event from backend, please include the GlobalNotification controller in your layout page:
+
+```
+...
+<div ng-controller="GlobalNotification"></div>
+...
+```
+
 # Notes on Notification Payload Structures
 
 ## Broadcast Notification
