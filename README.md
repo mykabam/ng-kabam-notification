@@ -51,7 +51,7 @@ In order to listen notification event from backend, please include the GlobalNot
 
 ```
 ...
-<div ng-controller="GlobalNotification"></div>
+<div ng-controller="GlobalNotificationCtrl"></div>
 ...
 ```
 
