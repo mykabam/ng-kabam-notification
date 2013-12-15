@@ -1,7 +1,7 @@
 ng-kabam-notification
 =====================
 
-A module to handle Notification service in Kabam application.
+An AngularJS module to handle Notification service in Kabam application.
 
 # How to install
 
