@@ -11,7 +11,8 @@
     "src/services/notification-utils.js",
     "src/services/notification-factory.js",
     "src/services/web-notification.js",
-    "src/controllers/global-notification.js"
+    "src/controllers/global-notification.js",
+    "src/styles/ng-kabam-notification.css"
   ],
   "keywords": [
     "kabam",
