@@ -16,7 +16,8 @@
  */
 angular.module('ng-kabam-notification', [
   // 3rd party dependencies
-  'btford.socket-io'
+  'btford.socket-io',
+  'kabam.requestNotificationPermission'
 ])
   .config(['socketProvider',
     function(socketProvider) {

@@ -7,7 +7,7 @@ An AngularJS module to handle Notification service in Kabam application.
 
 ## Get it via Bower
 
-To use this directive, fist you need to install it via Bower. I assume you already install the Bower:
+To use this module, fist you need to install it via Bower. I assume you already install the Bower:
 
 ```
 bower install git+ssh://git@github.com/mykabam/ng-kabam-notification.git
@@ -44,6 +44,10 @@ angular.module('yourAwesomeApplication', [
   'ng-kabam-notification'
 ]);
 ```
+
+## Required directives
+
+In order to request Web Notification permission seamlessly, we depends on [requestNotificationPermission](https://github.com/mykabam/requestNotificationPermission), so you must this directive inside your Kabam application. More details on how to use it, please visit the [docs](https://github.com/mykabam/requestNotificationPermission#how-to-use).
 
 ## Listen to backend
 
