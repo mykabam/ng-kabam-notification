@@ -106,7 +106,6 @@ angular.module('ng-kabam-notification')
             addclass: 'custom ng-kabam-notification',
             hide: false
           }).click(function(e) {
-            console.log('e.target', e.target);
             // if the element is clicked element then hide it
             var CALL_BUTTONS_CLICKED = $(e.target).is('#accept-call') ||
               $(e.target).is('#accept-reject');
