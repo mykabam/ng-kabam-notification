@@ -76,12 +76,14 @@ angular.module('ng-kabam-notification')
         if (BROADCAST_ACTION) {
           $.pnotify({
             title: 'Broadcast',
-            text: options.data.message
+            text: options.data.message,
+            addclass: 'custom ng-kabam-notification'
           });
         } else if (DEFAULT_NOTIF) {
           $.pnotify({
             title: 'Notification from ' + options.data.message.from,
-            text: options.data.message.text
+            text: options.data.message.text,
+            addclass: 'custom ng-kabam-notification'
           });
         } else if (CALL_NOTIF) {
           var ACCEPT_BUTTON = '<a id="accept-call" ' +
@@ -101,7 +103,7 @@ angular.module('ng-kabam-notification')
           $.pnotify({
             title: 'You got call!',
             text: callNotifBodyMessage,
-            addclass: 'custom call-notification'
+            addclass: 'custom ng-kabam-notification'
           }).click(function(e) {
             // if the element is clicked element then hide it
             var CALL_BUTTONS_CLICKED = $(e.target).is('#accept-call') ||
