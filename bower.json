@@ -38,7 +38,7 @@
   ],
   "dependencies": {
     "angular-socket-io": "~0.2.0",
-    "pines-notify": "mykabam/pines-notify",
+    "pines-notify": "git://github.com/mykabam/pines-notify#1.2.0-fork.1",
     "jquery": "~2.0.3",
     "kabam-requestNotificationPermission": "~1.0.0"
   },
