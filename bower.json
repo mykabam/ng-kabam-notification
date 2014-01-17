@@ -1,6 +1,6 @@
 {
   "name": "ng-kabam-notification",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "homepage": "https://github.com/mykabam/ng-kabam-notification",
   "authors": [
     "Muhammad Ghazali <muhammadghazali2480@gmail.com>"
@@ -38,7 +38,7 @@
   ],
   "dependencies": {
     "angular-socket-io": "~0.2.0",
-    "pines-notify": "git://github.com/mykabam/pines-notify#1.2.0-fork.1",
+    "pines-notify": "git://github.com/sciactive/pnotify.git#3b8e06115a",
     "jquery": "~2.0.3",
     "kabam-requestNotificationPermission": "~1.0.0"
   },
