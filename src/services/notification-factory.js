@@ -62,7 +62,8 @@ angular.module('ng-kabam-notification')
 
           // when the notification window clicked then redirect to room view
           callNotification.addEventListener('click', function() {
-            $window.open('/home#/call/room/' + options.data.message.roomId,
+            var url = options.message.targetUrl || '/home#/call/room/';
+            $window.open(url + options.data.message.roomId,
               '_self');
             callNotification.close();
           });
